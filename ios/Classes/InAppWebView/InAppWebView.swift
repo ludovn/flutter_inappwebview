@@ -108,7 +108,7 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate, WKNavi
     private func forceUsingSpeakerAudio(){
         let session: AVAudioSession = AVAudioSession.sharedInstance()
         do {
-            try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try session.setCategory(AVAudioSession.Category.playAndRecord)
             try session.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
             try session.setActive(true)
         } catch {
